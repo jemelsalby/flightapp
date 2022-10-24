@@ -5,22 +5,35 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddflightComponent } from './addflight/addflight.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 const routes:Routes=[
   {
-
+    path:"",component:NavbarComponent
+  },
+  {
+    path:"add",component:AddflightComponent
+  },
+  {
+    
   }
 ]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddflightComponent,
+    NavbarComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-RouterModule.forRoot(routes)
+RouterModule.forRoot(routes),
+FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
